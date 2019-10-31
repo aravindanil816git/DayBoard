@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>DayBoard</title>
+        <link rel="stylesheet" type="text/css" href="index.css"></link>
+    </head>
+    <body>
+        <h1 class="dayboard-title">Dayboard</h1>
+        <br/>
+        <input id='task-txt'></input>
+        <button id="create-task" onclick="addNewTask()">Create</button>
+        <div class="task-board">
+            <div class="new task-col" ondragover="allowDrop(event)" ondrop="drop(event)" data-status="New">
+                <div class="col-title">New</div>
+                <!--<div class="task" draggable="true" ondragstart="drag(event)" id="tak1">
+                    <h5 class="task-title"><span class="status">New</span> Task 1</h5>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>-->
+            </div>
+            <div class="active task-col" ondragover="allowDrop(event)" ondrop="drop(event)" data-status="Active">
+                <div class="col-title">Active</div>
+                <!--<div class="task" draggable="true" ondragstart="drag(event)" id="tak2">
+                    <h5 class="task-title"><span class="status">Active</span> Task 2</h5>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>-->
+            </div>
+            <div class="completed task-col" ondragover="allowDrop(event)" ondrop="drop(event)" data-status="Completed">
+                <div class="col-title">Completed</div>
+            </div>
+            <div class="pending task-col">
+                 <div class="col-title">Pending</div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
