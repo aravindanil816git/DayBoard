@@ -10,18 +10,23 @@
     justify-content: center;
 }
 
+.add-task-region{
+    margin-bottom: 50px;
+    text-align: center;
+}
 .col-title{
     background: white;
     color: black;
     text-align: center;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 16pt;
 }
 .task-board .task-col:not(:last-child){
-    border-right: 1px solid black;
+    border-right: 1px dashed #c3baba;
 }
 
 .task-board .task-col{
-    background-color: purple;
+    background: linear-gradient(to bottom, #eeeeee 0%,#eeeeee 100%);
     width: 24%;
 }
 
@@ -32,5 +37,76 @@
 .task{
     padding: 10px;
     margin: 10px;
-    border:1px solid green;
+    border: 1px solid #a0a0a0;
+    box-shadow: 5px 5px 5px grey;
+    background: white;
+    border-radius: 5px;
+}
+
+.task:active{
+    border: 1px solid #2D2BDB; 
+}
+
+.completed.task-col .task{
+    border: 1px solid #3ADB2B; 
+}
+
+.status{
+    display: block;
+    text-align: right;
+    font-size: 8pt;
+}
+
+.edit-txt{
+    width: 100%;
+}
+
+button{
+    border: 1px solid;
+    border-radius: 17px;
+    font-size: 10pt;
+    background: #E1F5F5;
+    margin: 1pt;
+}
+
+button:hover{
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.no-edit-controls , .edit-controls{
+    margin-top: 3%;
+}
+
+.task.noedit .no-edit-controls{
+    display: block;
+}
+.task.noedit .edit-controls{
+    display: none;
+}
+.task.edit .no-edit-controls{
+    display: none;
+}
+.task.edit .edit-controls{
+    display: block;
+}
+
+.task.edit .edit-txt{
+    display: block;
+}
+.task.noedit .edit-txt{
+    display: none;
+}
+
+
+.task.noedit .task-title{
+    display: block;
+}
+.task.edit .task-title{
+    display: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
